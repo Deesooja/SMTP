@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .super_div{
+            width: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+        .main_div{
+           /* border: 1px solid black; */
+            width: 40%;
+            align-items: center;
+        }
+        .top_div{
+            border-bottom: 1px solid black; 
+            display: flex;
+            justify-content: space-between ;
+        }
+        /* .mid_div{
+            border: 1px solid rgb(72, 255, 0);
+        } */
+        .btn_div{
+            /* border: 1px solid rgb(255, 94, 0); */
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            width: 60%;
+            height: 50px;
+            background-color: rgb(23, 163, 218);
+        }
+        a{
+            text-size-adjust: 100px;
+        }
+        .bottum_div{
+            border-top: 1px solid black; 
+            /* border: 1px solid rgb(0, 255, 157); */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1 style="color: gold;">{{contant}}</h1> -->
+    <div class="super_div">
+        <div class="main_div">
+            <div class="top_div">
+                <!-- <div class="left_div">
+                    <small>logo</small>
+    
+                </div> -->
+                <div class="right_div">
+                    <small style="color: skyblue;">Invited User Varyfication</small>
+                </div>
+    
+            </div>
+            <div class="mid_div">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quos?</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, voluptatibus.</p>
+
+                <div class="btn_div" >
+                    <button class="btn"><a href="http://127.0.0.1:8000/send/mail/html-template">Varify</a></button>
+                    <!-- <button class="btn"></button><a href="#">Varify</a></button> -->
+                </div>
+            </div>
+    
+            <div class="bottum_div">
+                <p>Lorem ipsum dolor sit amet.</p>
+    
+            </div>
+    
+        </div>
+
+    </div>
+    
+
+    <!-- <h1 style="color: gold;">This Email Send By Django and Code by Deesooja</h1> -->
+
+</body>
+</html>
