@@ -8,11 +8,13 @@ from django.utils.html import strip_tags
 # Create your views here.
 
 class EmailSend(APIView):
-    def get(self, request):
+    def post(self, request):
+        emails = request.data.get("emails", [])
         from_email = settings.EMAIL_HOST_USER
         subject = "Testing"
         message = "This Email Send Using "
-        recipient_list = ["prksvsvkrma@gmail.com"]
+        # recipient_list = ["prksvsvkrma@gmail.com"]
+        recipient_list = emails
         return_value = send_mail(subject, message, from_email, recipient_list)
         print("return_value", return_value)
         render_to_string("email_template.html")
@@ -29,6 +31,7 @@ class HtmlTemplateSendByEmail(APIView):
         text_contant = strip_tags(html_contant)
         email = EmailMultiAlternatives(subject, text_contant, from_email, recipient_list)
         email.attach_alternative(html_contant, 'text/html')
+        # email.attach_alternative(file, )
         print(email.send())
         print("clicked")
         return endpointResponse(status_code=200, massage="Ok", data=[])
